@@ -13,34 +13,46 @@ let points = 0;
 
 let enemyArray = [];
 
+let playerImage;
+let ballImage; 
+
+
+function preload() {
+    playerImage = loadImage("images/cpsoccer.webp");
+    ballImage = loadImage("images/soccerball.webp");
+}
+
 function setup() {
     createCanvas(1000, 500);
      
     for (let i = 0; i < 5; i++) {
-        let temp = new Enemy(1000, random(0, 500), 0, 255, 0, 2);
+        let temp = new Enemy(1000, random(0, 500), 0, 0, 255, 2);
         enemyArray.push(temp);
     } 
 
     rectMode(CENTER);
+    
 }
 
 
 function draw() {
-    background(0, 0, 0);
+    background(0, 135, 0);
  
     fill(255, 255, 255);
     textSize(22);
     text("Score: " + points, 30, 30);
 
-    fill(255, 0, 0);
-    rect(myXPos, myYPos, 100, 100);
+    //fill(255, 0, 0);
+    //rect(myXPos, myYPos, 100, 100);
 
-    fill(0, 255, 0);
-    rect(ballXPos, ballYPos, 50, 50);
-
+    //fill(0, 255, 0);
+    //rect(ballXPos, ballYPos, 50, 50);
+    noStroke();
     fill(255, 255, 255);
     rect(goalXPos, goalYPos, 30, 150);
 
+    image (playerImage, myXPos, myYPos, 100, 100);
+    image (ballImage, ballXPos, ballYPos, 50, 50);
      
     if (keyIsDown(LEFT_ARROW)) {
         myXPos -= 2;
@@ -104,12 +116,13 @@ function draw() {
     }
 
     else {
-        background(0, 0, 0)
+        background(0, 135, 0)
 
         fill(255, 255, 255);
         textSize(50);
         text("YOU WIN!", 300, 250);
         text("FINAL SCORE: " + points, 300, 300);
+        text("Click 'MORE' if you like soccer!", 200, 400);
     }
 
 }

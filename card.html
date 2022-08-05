@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css"/>
+    <title>Soccer Website</title>
+    <script src="data.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <nav id = "navigation">
+        <div id = "logo">GENERATE PLAYER CARDS!</div>
+  
+        <div class = "items"><a href="index.html">My Game</a></div>
+        <div class = "items"><a href="home.html">Home</a></div>
+     </nav>
+    
+    <h1 id="player_name">ST - Robert Lewandowski</h1>
+    <div id="player_content">
+
+        <div id="player_preview">
+            <h2 id="player_types">Fc Barcelona #9</h3>
+            <img id="player_img" src="https://cdn.realsport101.com/images/ncavvykf/realsport-production/9f65eb6395697b9a0a9b6cb66df076b3e9e098c6-450x650.png?w=346&h=500&auto=format"/>
+        </div>
+        <div>
+            <h2>Player Stats</h2>
+            <div id="player_stats">
+                <div id="pace"><p class="attributes">Pace</p></div>
+                <div id="shooting"><p class="attributes">Shooting</p></div>
+                <div id="passing"><p class="attributes">Passing</p></div>
+                <div id="dribbling"><p class="attributes">Dribbling</p></div>
+                <div id="defending"><p class="attributes">Defending</p></div>
+                <div id="physicality"><p class="attributes">Physicality</p></div>
+            </div>
+        </div>
+        <div id="video">
+            <h2>Player Highlights</h2>
+            <!-- This whole code is generated from -->
+            <iframe id="videos" width="400" height="230" src="https://www.youtube.com/embed/MSwxpPf1qKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <br><br>
+    <button id="random_btn">Generate Card!</button>
+
+</body>
+</html>
